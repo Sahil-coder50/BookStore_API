@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if book %}
+
+        <div>
+            {{book.as_p}}
+        </div>
+
+    {% endif %}
+
+{% endblock %}

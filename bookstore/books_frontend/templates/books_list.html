@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    {% for book in books %}
+
+        <div>
+            {{book.as_p}}
+        </div>
+
+    {% endfor %}
+</div>
+
+{% endblock %}
