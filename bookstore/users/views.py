@@ -50,15 +50,6 @@ class Login_User(APIView):
         
         token, created = Token.objects.get_or_create(user=user)
         return Response({'token':token.key}, status=status.HTTP_200_OK)
-
-# class Logout_User(APIView):
-    
-#     permission_classes = [IsAuthenticated]
-
-#     def post(self, request):
-#         request.user.auth_token_delete()
-
-#         return Response({'message':'Logged out successfully'})
     
 
 class Profile_View(APIView):
