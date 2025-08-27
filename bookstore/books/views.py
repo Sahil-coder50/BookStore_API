@@ -20,6 +20,8 @@ class Book_List(APIView):
         
     #     return [AllowAny]
 
+    permission_classes=[IsAuthenticated]
+
     def get(self, request):
         try:
             books = Books.objects.all()
